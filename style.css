@@ -7,7 +7,11 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background: #ffedd3;
+    background-color: #dddddd;
+    background-image: url("https://www.figma.com/api/mcp/asset/787b0bfa-dfda-45c0-98bc-2eaea59bdc04");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: min(1060px, 100vw) auto;
 }
 
 .page {
@@ -23,7 +27,7 @@ body {
     background: #fff8eb;
     border-radius: 66px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 120px 60px 40px;
+    padding: 170px 60px 34px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,13 +36,13 @@ body {
 .title {
     margin: 0;
     font-family: 'Judson', serif;
-    font-size: clamp(2rem, 4.6vw, 4rem);
+    font-size: clamp(2rem, 4.45vw, 64px);
     text-align: center;
     color: #000;
 }
 
 .upload-button {
-    margin-top: 40px;
+    margin-top: 74px;
     width: 203px;
     height: 78px;
     border: 0;
@@ -53,22 +57,23 @@ body {
 
 .how-it-works {
     margin-top: auto;
-    width: 100%;
+    width: 744px;
+    max-width: 100%;
     border-radius: 20px;
     background: rgba(224, 210, 190, 0.43);
-    padding: 14px 12px 28px;
+    padding: 16px 12px 22px;
 }
 
 .how-it-works h2 {
     margin: 0;
     font-family: 'Source Serif 4', serif;
-    font-size: 38px;
+    font-size: 36px;
     font-weight: 600;
     color: #000;
 }
 
 .steps {
-    margin-top: 18px;
+    margin-top: 4px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
@@ -79,7 +84,7 @@ body {
 }
 
 .step-number {
-    margin: 0;
+    margin: 6px 0 0;
     font-family: 'Judson', serif;
     font-size: 36px;
     font-weight: 700;
@@ -87,10 +92,10 @@ body {
 }
 
 .step-text {
-    margin: 12px auto 0;
+    margin: 6px auto 0;
     max-width: 170px;
     font-family: 'Source Serif 4', serif;
-    font-size: 27px;
+    font-size: 16px;
     line-height: 1.15;
     color: #000;
 }
@@ -98,7 +103,7 @@ body {
 @media (max-width: 900px) {
     .card {
         border-radius: 32px;
-        padding: 70px 24px 24px;
+        padding: 88px 24px 24px;
         min-height: 650px;
     }
 
