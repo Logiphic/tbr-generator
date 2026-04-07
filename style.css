@@ -7,11 +7,11 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background-color: #dddddd;
-    background-image: url("https://www.figma.com/api/mcp/asset/787b0bfa-dfda-45c0-98bc-2eaea59bdc04");
+    background-color: #2a0404;
+    background-image: radial-gradient(ellipse at center, #e0d2be 37.5%, #b39e8f 52.5%, #9c8578 60%, #856b61 67.5%, #6e514a 75%, #583732 82.5%, #411e1b 90%, #351110 93.8%, #2a0404 97.6%);
     background-repeat: no-repeat;
-    background-position: center top;
-    background-size: min(1060px, 100vw) auto;
+    background-position: center;
+    background-size: cover;
 }
 
 .page {
@@ -27,7 +27,7 @@ body {
     background: #fff8eb;
     border-radius: 66px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 170px 60px 34px;
+    padding: 86px 64px 72px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,82 +41,146 @@ body {
     color: #000;
 }
 
-.upload-button {
-    margin-top: 74px;
-    width: 203px;
-    height: 78px;
-    border: 0;
-    border-radius: 38px;
-    background: #8b1f0c;
-    color: #fff8eb;
+.upload-card {
+    position: relative;
+}
+
+.back-link {
+    position: absolute;
+    left: 44px;
+    top: 84px;
+    display: inline-flex;
+    width: 43px;
+    height: 30px;
+}
+
+.back-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.goodreads-link-wrap {
+    margin: 96px 0 0;
+}
+
+.goodreads-link {
+    color: #2a0404;
+    font-family: 'Source Serif 4', serif;
+    font-size: 37px;
+    text-decoration: underline;
+}
+
+.upload-row {
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.upload-label {
+    margin: 0;
     font-family: 'Source Serif 4', serif;
     font-size: 24px;
-    font-weight: 700;
+}
+
+.choose-file {
+    width: 234px;
+    height: 72px;
+    border-radius: 53px;
+    background: #fff;
+    color: #e9a8a8;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: grid;
+    place-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    text-decoration: underline;
     cursor: pointer;
 }
 
-.how-it-works {
+.progress-section {
     margin-top: auto;
-    width: 744px;
-    max-width: 100%;
-    border-radius: 20px;
-    background: rgba(224, 210, 190, 0.43);
-    padding: 16px 12px 22px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto minmax(180px, 1fr) auto;
+    align-items: center;
+    gap: 16px;
 }
 
-.how-it-works h2 {
+.progress-label,
+.progress-value {
     margin: 0;
     font-family: 'Source Serif 4', serif;
-    font-size: 36px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 400;
     color: #000;
 }
 
-.steps {
-    margin-top: 4px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
+.progress-track {
+    height: 16px;
+    border-radius: 50px;
+    background: #ffedd3;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
 }
 
-.step {
-    text-align: center;
-}
-
-.step-number {
-    margin: 6px 0 0;
-    font-family: 'Judson', serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: #000;
-}
-
-.step-text {
-    margin: 6px auto 0;
-    max-width: 170px;
-    font-family: 'Source Serif 4', serif;
-    font-size: 16px;
-    line-height: 1.15;
-    color: #000;
+.progress-fill {
+    display: block;
+    height: 100%;
+    width: 70%;
+    border-radius: 50px;
+    background: linear-gradient(to right, #8b1f0c 67.916%, #ffedd3 74.707%);
 }
 
 @media (max-width: 900px) {
     .card {
         border-radius: 32px;
-        padding: 88px 24px 24px;
-        min-height: 650px;
+        min-height: auto;
+        padding: 70px 24px 32px;
     }
 
-    .how-it-works h2 {
-        font-size: 32px;
+    .back-link {
+        left: 22px;
+        top: 22px;
     }
 
-    .steps {
+    .goodreads-link-wrap {
+        margin-top: 44px;
+    }
+
+    .goodreads-link {
+        font-size: clamp(1.15rem, 5vw, 1.6rem);
+        text-align: center;
+    }
+
+    .upload-row {
+        margin-top: 34px;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .upload-label,
+    .progress-label,
+    .progress-value {
+        font-size: 20px;
+    }
+
+    .choose-file {
+        width: min(234px, 100%);
+        height: 62px;
+        font-size: 30px;
+    }
+
+    .progress-section {
+        margin-top: 36px;
         grid-template-columns: 1fr;
-        gap: 0.75rem;
+        gap: 8px;
     }
 
-    .step-text {
-        max-width: 100%;
+    .progress-value {
+        justify-self: end;
     }
 }
