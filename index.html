@@ -7,31 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 </head>
-<body>
+<body class="page-home">
     <main class="page">
-        <section class="card upload-card">
-            <a class="back-link" href="#" aria-label="Go back">
-                <img src="https://www.figma.com/api/mcp/asset/4b1cc60d-78c6-41f1-a7ea-beb8d214945f" alt="" />
-            </a>
+        <section class="screen home-screen is-active" data-page="home">
+            <section class="card home-card">
+                <h1 class="title">Find Your Next Read</h1>
+                <button id="go-to-upload" class="upload-button" type="button">Upload Books</button>
 
-            <h1 class="title">Upload Books</h1>
+                <section class="how-it-works">
+                    <h2>How it works?</h2>
+                    <div class="steps">
+                        <article class="step">
+                            <p class="step-number">1</p>
+                            <p class="step-text">upload your books using a csv file</p>
+                        </article>
+                        <article class="step">
+                            <p class="step-number">2</p>
+                            <p class="step-text">choose your preferences eg,. mood , top picks.</p>
+                        </article>
+                        <article class="step">
+                            <p class="step-number">3</p>
+                            <p class="step-text">Generate and enjoy reading!</p>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </section>
 
-            <p class="goodreads-link-wrap">
-                <a class="goodreads-link" href="#">Download csv file from Goodreads</a>
-            </p>
+        <section class="screen upload-screen" data-page="upload">
+            <section class="card upload-card">
+                <a id="back-to-home" class="back-link" href="#" aria-label="Go back">
+                    <img src="https://www.figma.com/api/mcp/asset/4b1cc60d-78c6-41f1-a7ea-beb8d214945f" alt="" />
+                </a>
 
-            <div class="upload-row">
-                <p class="upload-label">upload your library csv file here</p>
-                <label for="library-file" class="choose-file">Choose file</label>
-                <input id="library-file" type="file" accept=".csv" hidden />
-            </div>
+                <h1 class="title">Upload Books</h1>
 
-            <section class="progress-section" aria-label="Upload progress">
-                <p class="progress-label">Upload progress</p>
-                <div class="progress-track" role="progressbar" aria-valuenow="140" aria-valuemin="0" aria-valuemax="200">
-                    <span class="progress-fill"></span>
+                <p class="goodreads-link-wrap">
+                    <a class="goodreads-link" href="#">Download csv file from Goodreads</a>
+                </p>
+
+                <div class="upload-row">
+                    <p class="upload-label">upload your library csv file here</p>
+                    <label for="library-file" class="choose-file">Choose file</label>
+                    <input id="library-file" type="file" accept=".csv" hidden />
                 </div>
-                <p class="progress-value">140/200</p>
+
+                <section class="progress-section" aria-label="Upload progress">
+                    <p class="progress-label">Upload progress</p>
+                    <div class="progress-track" role="progressbar" aria-valuenow="140" aria-valuemin="0" aria-valuemax="200">
+                        <span class="progress-fill"></span>
+                    </div>
+                    <p class="progress-value">140/200</p>
+                </section>
             </section>
         </section>
     </main>
