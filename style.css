@@ -13,8 +13,8 @@ body {
 }
 
 body.page-home {
-    background-color: #dddddd;
-    background-image: url("https://www.figma.com/api/mcp/asset/787b0bfa-dfda-45c0-98bc-2eaea59bdc04");
+    
+    background: url("/res/homepage.png") lightgray 0% 0% / 95.923912525177px 95.923912525177px repeat;;
     background-size: min(1060px, 100vw) auto;
 }
 
